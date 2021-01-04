@@ -1,2 +1,9 @@
+install.packages("dplyr")
+install.packages("sp")
+setwd()
+library(sp)
+library(ncdf4)
 
-print("Hola Junior esto es un testa para que hagas un snippet")
+library(raster)
+
+

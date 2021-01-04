@@ -23,3 +23,9 @@ raster::projection(long_lati)<- raster::projection(raster_pp)
 points_long_lati<- raster::extract(raster_pp[[1]], long_lati, cellnumbers= T)[,1]
 data_long_tati<- t(raster_pp[points_long_lati])
 colnames(data_long_tati)<-as.character(long_lati$NN)
+View(data_long_tati)
+#....Generando mi archivo CSV.......
+write.csv(data_long_tati, "SALIDA/preci.csv", quote = F)
+
+#...Distribucion Gumbel.....
+

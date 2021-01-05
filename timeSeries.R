@@ -47,6 +47,7 @@ grafLagunaRamon<-plot(LagunaRamon.ts,
                   sub="Fuente: Datos PISCO SENAMHI")
          
 #[40] "LAGUNA RAMON"#
+#[40] "LAGUNA RAMON"#
 Estaciones<-data_long_tati[,1:40]
 funcion<-funcion(Estaciones){
             Estaciones[i].ts<-ts(Huapalas, start = 1981, frequency = 12)

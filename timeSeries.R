@@ -29,29 +29,23 @@ grafCruceta<-plot(Cruceta.ts,
                     sub="Fuente: Datos PISCO SENAMHI")
 
 #Curvan=3,ElTablazo=4, Hualtaco=5,Malingas=6 y 7, TamboGrande=8,SanJoaquin=9,Tejedores=10
-#Chulucanas=11,HaciendaYapatera=12,
-Huapalas<-data_long_tati[,13]
-Huapalas.ts<-ts(Huapalas, start = 1981, frequency = 12)
+#Chulucanas=11,HaciendaYapatera=12,huapalas=13,SanPedro=14,SantoDomingo=15 y 16,Miraflores=17
+#Piura=18,Altamiza=19,Chalaco=20,PaloBlanco=21,Pasapampa=22,Morropon=23,CorralDelMedio=24
+#Paltashaco=25,SanMiguel=26, Virrey=27,HaciendaPabur=28, Canchaque=29, Huancabamba=30,
+#HaciendaBigote=31,Barrios=32,Montegrande=33,Malacasi=34 y 35,Chignia=36, Pirgas=37,Bernal=38
+#Chusis=39, LagunaRamon=40
+LagunaRamon<-data_long_tati[,40]
+LagunaRamon.ts<-ts(LagunaRamon, start = 1981, frequency = 12)
 #view(SanIsidro.ts)
-grafHuapalas<-plot(Huapalas.ts,
+grafLagunaRamon<-plot(LagunaRamon.ts,
                   xlab="Año (1981 al 2016)",
                   ylab="Precipitaciones mensuales",
                   type="S", 
                   col="blue",
                   lwd="2.5",
-                  main = "Estación Meteorológica de Huapalas",
+                  main = "Estación Meteorológica de Laguna Ramon",
                   sub="Fuente: Datos PISCO SENAMHI")
- 
-    
-#   "SAN PEDRO"         "SANTO DOMINGO"    
-#[16] "SANTO DOMINGO"     "MIRAFLORES"        "PIURA"            
-#[19] "ALTAMIZA"          "CHALACO"           "PALO BLANCO"      
-#[22] "PASAPAMPA"         "MORROPON"          "CORRAL DEL MEDIO" 
-#[25] "PALTASHACO"        "SAN MIGUEL"        "VIRREY"           
-#[28] "HACIENDA PABUR"    "CANCHAQUE"         "HUANCABAMBA"      
-#[31] "HACIENDA BIGOTE"   "BARRIOS"           "MONTEGRANDE"      
-#[34] "MALACASI"          "MALACASI"          "CHIGNIA"          
-#[37] "PIRGAS"            "BERNAL"            "CHUSIS"           
+         
 #[40] "LAGUNA RAMON"#
 Estaciones<-data_long_tati[,1:40]
 funcion<-funcion(Estaciones){

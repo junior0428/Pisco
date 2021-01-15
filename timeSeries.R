@@ -1,8 +1,27 @@
 install.packages("tidyverse") #para las fechas 
 install.packages("lubridate")
+#install.packages("car")
+#install.packages("carData")
 library(tidyverse)
 library(lubridate)
+#library(carData)
+#library(car)
+as.numeric(data_long_tati)
 colnames(data_long_tati) #para saber el nombre de las columnas 
+plot(as.numeric(data_long_tati), 
+     type="p", 
+     col="#1B9E77",
+     lwd = 3,
+     xlab="Número de datos",
+     ylab="Precipitaciones mensuales (mm)")
+points(max(data_long_tati[,1:40]), cex = .10, col = "red")
+numDatos<-c(1:1440)
+axes(1, at=0:1440)
+axis(2, las=1, at=4*0:2000)
+lines(data_long_tati)
+?lines
+#avPlots(cor(data_long_tati), id.n = 2, id.cex = 0.7)
+#?avPlots
 SanIsidro<-data_long_tati[,1]
 SanIsidro.ts<-ts(SanIsidro, start = 1981, frequency = 12)
 #view(SanIsidro.ts)

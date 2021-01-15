@@ -1,1 +1,17 @@
+#ejemplos muy interesantes en r
+https://bookdown.org/ndphillips/YaRrr/more-colors.html
+
+
+
+#Graficas muy bonitos
 https://www.r-graph-gallery.com/
+
+
+#graficas de plot
+https://picandoconr.wordpress.com/2016/06/22/sobre-la-media-y-la-desviacion-estandar/
+
+#otras
+http://www.sthda.com/english/wiki/add-legends-to-plots-in-r-software-the-easiest-way
+
+#de gran ayuda
+https://sites.harding.edu/fmccown/r/

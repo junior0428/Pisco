@@ -70,6 +70,22 @@ for (q in 1:40) {
 }
 
 View(Gumbel)
+# graficas para gumbel 
+install.packages("dgumbel")
+plot(Gumbel[,1])
+library(dgumbel)
+ind<-c(min(Gumbel):max(Gumbel))
+plot(Gumbel[,1], type="o", col="red", 
+     xlab="Datos de 36 años de la Estaciones Meteorológicas",
+     ylab="Distribución de Gumbel de precipitaciones maximas (mm)")
+lines(Gumbel[,40], col="blue", type="o")
+
+lines(Gumbel[,1], col="red", type="o")
+for (mm in 2:39) {
+  lines(Gumbel[,mm], type="o", col= 1:38)
+  
+}
+plot(dgumbel(Caudal[,2]), type="o")
 #Grafica de gumbel y pp mayor des
 ej<-c(1:10)
 ejj<-data.frame(order(-ej))
@@ -90,7 +106,30 @@ for (jj in 1:4) {
   tiemReto[1:40, jj]<-tr_tem
 }
 
+names(tiemReto)<-c("TR=10","TR=30","TR=50","TR=100")
 View(tiemReto)
+tiemReto
+plot_colors<-c("green","#FFCC00", "red","blue")
+max_y<-max(tiemReto)
+plot(tiemReto$`TR=10`,type = "o",  ylim=c(100,max_y), axes=FALSE, ann=FALSE, col=plot_colors[1])
+lines(tiemReto$`TR=30`, type = "o", col=plot_colors[2])
+lines(tiemReto$`TR=50`, type = "o", col=plot_colors[3])
+lines(tiemReto$`TR=100`, type = "o", col=plot_colors[4])
+axis(1, at=1:40, lab=Estaciones)
+axis(2, las=1, at=4*0:max_y)
+
+# Create a title with a red, bold/italic font
+title(main="Tiempo de Retorno de las estaciones meteorologicas de Piura", font.main=4)
+
+# Label the x and y axes with dark green text
+title(xlab= "Estaciones Meteorologicas")
+title(ylab= "Precipitaciones Maximas (mm)")
+
+#Leyenda
+legend("topright", max_y, names(tiemReto), cex=0.6, col=plot_colors,
+       pch=21:23, lty=1:3)
+
+?legend
 
 #graficas de los TR
 install.packages("latticeExtra")

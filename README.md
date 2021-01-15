@@ -1,2 +1,2 @@
 # Pisco
-Aprendiendo usar**R** para la obtención de datos pisco
+Aprendiendo usar **R** para la obtención de datos pisco
